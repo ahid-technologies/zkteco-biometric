@@ -1,0 +1,52 @@
+{
+  "name": "ahidtechnologies/zkteco-biometric",
+  "description": "Laravel package for ZKTeco biometric device integration with attendance management",
+  "keywords": [
+    "laravel",
+    "zkteco",
+    "biometric",
+    "attendance",
+    "fingerprint",
+    "device"
+  ],
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ahid Technologies",
+      "email": "info@ahidtechnologies.com",
+      "homepage": "https://ahidtechnologies.com"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "illuminate/support": "^10.0|^11.0",
+    "illuminate/database": "^10.0|^11.0",
+    "illuminate/http": "^10.0|^11.0",
+    "nesbot/carbon": "^2.0|^3.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.0|^9.0",
+    "phpunit/phpunit": "^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AhidTechnologies\\ZKTecoBiometric\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AhidTechnologies\\ZKTecoBiometric\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AhidTechnologies\\ZKTecoBiometric\\ZKTecoBiometricServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "version": "1.0.0"
+}

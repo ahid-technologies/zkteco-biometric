@@ -1,0 +1,37 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Laravel specific
+.env
+.env.backup
+.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Testing
+.phpunit.result.cache
+coverage/
+
+# Build artifacts
+/build/
+/dist/
+
+# Composer
+composer.phar
+auth.json
+
+# PHP
+*.cache
