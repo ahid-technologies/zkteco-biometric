@@ -332,12 +332,13 @@ class ZKTecoController
     {
         $currentTime = now()->format('Y-m-d H:i:s');
         $commandId = 'SYNCTIME_' . $device->serial_number . '_' . now()->timestamp;
+        $command = sprintf('SET OPTIONS DateTime=%s', $currentTime);
 
         BiometricCommand::create([
             'type' => 'SYNCTIME',
             'device_serial_number' => $device->serial_number,
             'command_id' => $commandId,
-            'command' => "TIME {$currentTime}",
+            'command' => $command,
             'employee_id' => null,
             'user_id' => null,
             'status' => 'pending',

@@ -167,12 +167,13 @@ class ZKTecoBiometric
         foreach ($devices as $device) {
             try {
                 $commandId = 'SYNCTIME_' . $device->serial_number . '_' . now()->timestamp;
+                $command = sprintf('SET OPTIONS DateTime=%s', $currentTime);
 
                 BiometricCommand::create([
                     'type' => 'SYNCTIME',
                     'device_serial_number' => $device->serial_number,
                     'command_id' => $commandId,
-                    'command' => "TIME {$currentTime}",
+                    'command' => $command,
                     'employee_id' => null,
                     'user_id' => null,
                     'status' => 'pending',
@@ -211,6 +212,6 @@ class ZKTecoBiometric
      */
     public function getVersion(): string
     {
-        return '1.0.0';
+        return '1.0.1';
     }
 }
