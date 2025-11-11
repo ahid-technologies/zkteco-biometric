@@ -201,7 +201,6 @@ class BiometricEmployee extends Model
                 }
 
                 $timestamp = \Carbon\Carbon::parse((string) $timestamp, config('zkteco-biometric.timezone', 'UTC'))
-                    ->setTimezone('UTC')
                     ->format('Y-m-d H:i:s');
 
                 // Check if the record already exists

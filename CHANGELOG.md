@@ -5,6 +5,15 @@ All notable changes to the ZKTeco Biometric package will be documented in this f
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.2] - 2025-11-11
+
+### Fixed
+
+- Removed timezone conversion that was causing timestamp discrepancies
+- Removed `->setTimezone('UTC')` from `BiometricEmployee::markAttendanceTodeviceAndApplication()` method
+- Removed `->utc()` from `AttendanceProcessor::processAttendanceRecord()` method
+- Timestamps now stored as-is from device, preserving actual punch time without unwanted conversions
+
 ## [1.0.1] - 2025-11-01
 
 ### Fixed

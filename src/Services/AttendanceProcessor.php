@@ -54,7 +54,6 @@ class AttendanceProcessor
 
         // Convert timezone
         $timestamp = Carbon::parse((string)$timestamp, config('zkteco-biometric.timezone', 'UTC'))
-            ->utc()
             ->format('Y-m-d H:i:s');
 
         // Check if record already exists
